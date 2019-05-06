@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UsersDB>
+
+ <user>
+    <id>0</id>
+    <usr>Nome</usr>
+    <email>email@host.com</email>
+    <psw>Password</psw>
+    <ddn/>
+</user>
+
+ <users>
+<id>1</id>
+<usr>Mignazzi</usr>
+<email>leonix8457@gmail.com</email>
+<psw>sgnero</psw>
+<ddn>2019-05-01</ddn>
+</users>
+
+</UsersDB>
