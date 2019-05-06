@@ -2,11 +2,11 @@
 <UsersDB>
 
  <user>
-    <id>0</id>
-    <usr>Nome</usr>
-    <email>email@host.com</email>
-    <psw>Password</psw>
-    <ddn/>
+<id>0</id>
+<usr>Nome</usr>
+<email>email@host.com</email>
+<psw>Password</psw>
+<ddn/>
 </user>
 
  <user>

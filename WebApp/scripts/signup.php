@@ -14,7 +14,7 @@ $xml=simplexml_load_file($filename) or die("Errore: Non posso aprire il file");
 
 echo "Registrazione Effettuata!\n";
 
-foreach($xml->children() as $user){}
+foreach($xml->children() as $users){}
 
 $xmldoc = new DOMDocument();
 $xmldoc->load($filename);
@@ -34,8 +34,8 @@ $newPage->appendXML(' <user>
 </user>
 
 ');
-    $firstchild->appendChild($newPage);
-    $xmldoc->save($filename);
 
+$firstchild->appendChild($newPage);
+$xmldoc->save($filename);
 
 ?>
