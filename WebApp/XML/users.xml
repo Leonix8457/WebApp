@@ -9,12 +9,12 @@
     <ddn/>
 </user>
 
- <users>
+ <user>
 <id>1</id>
 <usr>Mignazzi</usr>
 <email>leonix8457@gmail.com</email>
 <psw>sgnero</psw>
 <ddn>2019-05-01</ddn>
-</users>
+</user>
 
 </UsersDB>
