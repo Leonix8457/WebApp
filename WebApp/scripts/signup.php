@@ -14,7 +14,7 @@ $xml=simplexml_load_file($filename) or die("Errore: Non posso aprire il file");
 
 echo "Registrazione Effettuata!\n";
 
-foreach($xml->children() as $users){}
+foreach($xml->children() as $user){}
 
 $xmldoc = new DOMDocument();
 $xmldoc->load($filename);
@@ -25,13 +25,13 @@ $LastID = ($users->id)+1;
 	
 $firstchild = $xmldoc->getElementsByTagName('UsersDB')->item(0);
 $newPage = $xmldoc->createDocumentFragment();
-$newPage->appendXML(' <users>
+$newPage->appendXML(' <user>
 <id>'. $LastID .'</id>
 <usr>'. $uname .'</usr>
 <email>'. $email .'</email>
 <psw>'. $psw .'</psw>
 <ddn>'. $ddn .'</ddn>
-</users>
+</user>
 
 ');
     $firstchild->appendChild($newPage);
