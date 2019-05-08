@@ -1,8 +1,12 @@
+<html>
+<head>
+</head>
+<body>
 <?php
 
 ini_set('display_errors', 1);
 
-$filename = "C:\Apache24\htdocs\WebApp\XML\users.xml";
+$filename = "../XML/users.xml";
 
 $LastID = 0;
 $uname = $_POST["username"];
@@ -38,4 +42,8 @@ $newPage->appendXML(' <user>
 $firstchild->appendChild($newPage);
 $xmldoc->save($filename);
 
+header("Location: ../login.html");
+
 ?>
+</body>
+</html>
