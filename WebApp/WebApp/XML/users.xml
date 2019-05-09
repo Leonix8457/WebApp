@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UsersDB>
+
+ <user>
+<id>0</id>
+<usr>Nome</usr>
+<email>email@host.com</email>
+<psw>Password</psw>
+<ddn/>
+</user>
+
+ <user>
+<id>1</id>
+<usr>Mignazzi</usr>
+<email>leonix8457@gmail.com</email>
+<psw>sgnero</psw>
+<ddn>2019-05-01</ddn>
+</user>
+
+ <user>
+<id>2</id>
+<usr>GiovixGamer</usr>
+<email>pcgamerelectronic@gmail.com</email>
+<psw>01Riviello</psw>
+<ddn>2000-07-13</ddn>
+</user>
+
+ <user>
+<id>3</id>
+<usr>LucaPazzi</usr>
+<email>lp2000@gmail.com</email>
+<psw>pazzi</psw>
+<ddn>2019-05-02</ddn>
+</user>
+
+ <user>
+<id>4</id>
+<usr>LucaPazzi</usr>
+<email>lp2000@gmail.com</email>
+<psw>pazzi</psw>
+<ddn>2019-05-02</ddn>
+</user>
+
+ <user>
+<id>5</id>
+<usr>Linuk</usr>
+<email>linuk@gmail.com</email>
+<psw>padrazzi</psw>
+<ddn>2019-05-01</ddn>
+</user>
+
+ <user>
+<id>6</id>
+<usr>Sgnemmere</usr>
+<email>leonardo.ragni98@gmail.com</email>
+<psw>wario</psw>
+<ddn>2019-05-01</ddn>
+</user>
+
+ <user>
+<id>7</id>
+<usr>Sgnemmere</usr>
+<email>leonardo.ragni98@gmail.com</email>
+<psw>wario</psw>
+<ddn>2019-05-01</ddn>
+</user>
+
+ <user>
+<id>8</id>
+<usr>ragni5d2</usr>
+<email>leonix8457@gmail.com</email>
+<psw>aaa</psw>
+<ddn>2019-05-01</ddn>
+</user>
+
+ <user>
+<id>9</id>
+<usr>ragni5d2</usr>
+<email>leonardo.ragni98@gmail.com</email>
+<psw>aaaa</psw>
+<ddn>2019-05-01</ddn>
+</user>
+
+</UsersDB>
