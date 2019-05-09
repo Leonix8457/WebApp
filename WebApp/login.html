@@ -1,12 +1,49 @@
 <html>
 	<head>
+		 <script>
+
+        function login() {
+            var usr = document.getElementById("usr").value;
+            var psw = document.getElementById("psw").value;
+            console.log(usr);
+            console.log(psw);
+
+
+            //alert("CHIAMO");
+
+
+            x = new XMLHttpRequest();
+            var s = "scripts/login.php";
+
+            x.onreadystatechange = function () {
+                if (x.readyState == 4 && x.status == 200) {
+                    let res = x.responseText;
+                    //alert(res);
+                    if (res == "	loginsuccessful") {
+                        //alert("Cambio");
+                        window.location.href = "userhome.php";
+                    }
+                    else{
+                    	document.getElementById("auth_fail").innerHTML = "Username e/o Password Errati";
+                    }
+
+                } else {
+                    console.log(x.readyState);
+                }
+            }
+            x.open("POST", s, true);
+            x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            x.send("usr=" + usr + "&psw=" + psw);
+        }
+    	</script>
 	</head>
 	<body>
 		<h1>Login Webapp</h1><br>
-		<form action="scripts\login.php" method="post">
-			<input type="text" name="usr" placeholder="Nome Utente" required><br><br>
-			<input type="password" name="psw" placeholder="Password" required><br><br>
-			<input type="submit" value="Login"><br><br>
+		<form>
+			<input id="usr" type="text" placeholder="Nome Utente" required><br><br>
+			<input id="psw" type="password" placeholder="Password" required><br><br>
+            <p id="auth_fail"></p><br>
+			<button onclick="login()">Login</button><br><br>
 		</form>
 		<p>Non hai un account? <a href="signup.html">Registrati</a></p>
 	</body>
