@@ -5,8 +5,8 @@
         function login() {
             var usr = document.getElementById("usr").value;
             var psw = document.getElementById("psw").value;
-            console.log(usr);
-            console.log(psw);
+            //console.log(usr);
+            //console.log(psw);
 
 
             //alert("CHIAMO");
@@ -22,9 +22,6 @@
                     if (res == "	loginsuccessful") {
                         //alert("Cambio");
                         window.location.href = "userhome.php";
-                    }
-                    else{
-                    	document.getElementById("auth_fail").innerHTML = "Username e/o Password Errati";
                     }
 
                 } else {
@@ -42,7 +39,6 @@
 		<form>
 			<input id="usr" type="text" placeholder="Nome Utente" required><br><br>
 			<input id="psw" type="password" placeholder="Password" required><br><br>
-            <p id="auth_fail"></p><br>
 			<button onclick="login()">Login</button><br><br>
 		</form>
 		<p>Non hai un account? <a href="signup.html">Registrati</a></p>

@@ -11,7 +11,7 @@
         function showCharacters() {
 
             x = new XMLHttpRequest();
-            var s="../../back-end/PersonalReminder/showNotes.php";
+            var s="scripts/showCharacters.php";
 
             x.onreadystatechange = function(){
                 if(x.readyState == 4 && x.status == 200 ) {
@@ -24,16 +24,33 @@
                     var char, parser, xmlDoc;
                     char = x.responseText;
                     parser = new DOMParser();
-                    xmlDoc = parser.parseFromString(char,"char/xml");
+                    xmlDoc = parser.parseFromString(char,"text/xml");
 
-                    let myChar = xmlDoc.getElementsByTagName("char");
+                    let myCharName = xmlDoc.getElementsByTagName("name");
+                    let myCharClass = xmlDoc.getElementsByTagName("class");
+                    let myCharLevel = xmlDoc.getElementsByTagName("level");
 
-                    for(let i=0; i<myChar.length; i++){
-                        let nodo = document.createTextNode(myChar[i].childNodes[0].nodeValue);
-                        document.getElementById("showCharacters").appendChild(nodo);
+
+                    for(let i=0; i<myCharName.length; i++){
+                        let newDiv = document.createElement("input");
+                        newDiv.type = "radio";
+                        newDiv.name = "charSelect";
+                        newDiv.value = myCharName[i].childNodes[0].nodeValue;
+                        newDiv.id = "div" + i; 
+                        newDiv.className = "charNode";
+                        let nodoNome = document.createTextNode(myCharName[i].childNodes[0].nodeValue);
+                        let nodoClasse = document.createTextNode(myCharClass[i].childNodes[0].nodeValue);
+                        let nodoLivello = document.createTextNode(myCharLevel[i].childNodes[0].nodeValue);
                         let br = document.createElement("br");
+
+                        newDiv.appendChild(nodoNome);
+                        newDiv.appendChild(nodoClasse);
+                        newDiv.appendChild(nodoLivello);
+                        document.getElementById("showCharacters").appendChild(newDiv);
                         document.getElementById("showCharacters").appendChild(br);
-                        //alert(LeMieNote[i].childNodes[0].nodeValue);
+
+
+                        //alert(myChar[i].childNodes[0].nodeValue);
                     }
 
 
@@ -61,5 +78,9 @@
 			}
 		?>
 		</p>
+        <form id ="showCharacters">
+
+        </form>
+
 	</body>
 </html>

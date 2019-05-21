@@ -11,18 +11,20 @@ $idUser = $_SESSION["id"];
 $lastID =0;
 $xml=simplexml_load_file($filename) or die("Errore: Non posso aprire il file");
 
-$xmlResp="<char>\n";
+$xmlResp="<characters>\n";
 
 foreach($xml->children() as $id) { 
     if($id->idUser == $idUser){
         // COMPONI QUELLO CHE DEVI INVIARE
-         $xmlResp= $xmlResp."<name>". $id->name ."</name> \n";
-         $xmlResp= $xmlResp."<class>". $id->name ."</class> \n";
-         $xmlResp= $xmlResp."<level>". $id->name ."</level> \n";
+         $xmlResp= $xmlResp."<char>";
+         $xmlResp= $xmlResp."<name>". $id->name ."</name>\n";
+         $xmlResp= $xmlResp."<class>". $id->class ."</class>\n";
+         $xmlResp= $xmlResp."<level>". $id->level ."</level>\n";
+         $xmlResp= $xmlResp."</char>";
     } 
 } 
 
-$xmlResp=$xmlResp."</char>";
+$xmlResp=$xmlResp."</characters>";
 
 echo $xmlResp;
 
